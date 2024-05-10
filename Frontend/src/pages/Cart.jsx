@@ -101,7 +101,7 @@ const Cart = () => {
                   <div className="d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
                       Price: <FaDollarSign className="icon-prop" />
-                      <span className="text-muted text-decoration-line-through">
+                      <span className="text-muted">
                         {item.priceUSD}
                       </span>
                     </div>
