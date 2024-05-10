@@ -1,0 +1,92 @@
+
+.services {
+    width: 100%;
+    height: auto;
+    letter-spacing: 1px;
+    margin: 10rem 0px;
+}
+
+.services h1 {
+    margin:6rem 0px 3rem 0px;
+    position: relative;
+    font-weight: 800;
+}
+
+.services h1::after {
+    content: "";
+    width: 5.35rem;
+    height: 4px;
+    position: absolute;
+    left: 4px;
+    bottom: -2px;
+    background-color: red;
+}
+
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ServicesCard {
+    width: 160px;
+    min-height: 141px;
+    height: fit-content;
+    margin-right: 3px;
+    flex-grow: 1;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4px;
+}
+
+.ServicesCard .shipping, .support, .secure, .refund, .quality {
+    width: 60px;
+    height: 60px;
+}
+
+.ServicesCard p {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.ServicesCard:first-child:hover {
+    background-color: rgb(203, 95, 95);
+    color: white;
+}
+
+
+.ServicesCard:nth-child(2):hover {
+    background-color: rgb(85, 85, 204);
+    color: white;
+}
+
+.ServicesCard:nth-child(3):hover {
+    background-color: rgb(226, 200, 93);
+    color: white;
+}
+
+.ServicesCard:nth-child(4):hover {
+    background-color: rgb(95, 198, 169);
+    color: white;
+}
+
+.ServicesCard:last-child:hover {
+    background-color: #C0C0C0;
+    color: white;
+}
+
+.ServicesCard .ServicesDescription {
+    background-color: inherit;
+    padding: 4px;
+}
+
+
+.ServicesCard img {
+    width: 100%;
+    height: 100%;
+}

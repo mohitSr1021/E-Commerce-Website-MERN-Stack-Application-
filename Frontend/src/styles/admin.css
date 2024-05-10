@@ -1,0 +1,88 @@
+.admin-products-div {
+    height: 56vh;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: black beige;
+}
+
+.admin-products-div::-webkit-scrollbar-track {
+    background: black;
+}
+
+.admin-products-div::-webkit-scrollbar-thumb {
+    background: beige;
+}
+
+
+.admin-product-card {
+    width: 232px;
+    max-width: 324px;
+    min-height: 444px;
+    max-height: 445px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease-in-out;
+    background-color: rgba(228, 235, 241, 0.3);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    padding: 4px 4px;
+}
+
+.admin-product-card .image-container {
+    width: 100%;
+    height: 160px;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.admin-product-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+}
+
+.admin-product-card .rating-contianer {
+    width: fit-content;
+    background-color: blue;
+    border-radius: 4px;
+    color: aliceblue;
+    padding: 0px 4px;
+}
+
+.admin-product-card .rating-contianer span {
+    font-size: 15px !important;
+}
+
+.admin-product-card .rating {
+    width: 21px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    height: fit-content;
+}
+
+.admin-product-card .prices {
+    font-size: 20px !important;
+}
+
+.admin-product-card .update-div {
+    display: none !important;
+}
+
+.admin-product-card:hover .update-div {
+    width: 100%;
+    height: 100%;
+    display: block !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: rgb(45, 45, 45, 0.6);
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+}

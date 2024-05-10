@@ -1,0 +1,17 @@
+{
+  "name": "e_commerce_website_react",
+  "version": "1.0.0",
+  "description": "Ecommerce Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm start",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "author": "mohit-singh-rawat",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

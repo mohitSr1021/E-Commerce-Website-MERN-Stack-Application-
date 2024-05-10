@@ -1,0 +1,33 @@
+.product-container {
+    min-height: 100vh;
+}
+
+
+.breadcrumb-nav {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    width: 100%;
+    padding: 0px 12px;
+    background-color: white;
+    margin: 8px 0px;
+}
+
+.sort-color {
+    background-color: var(--my-black) !important;
+}
+
+.loader-container {
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+}

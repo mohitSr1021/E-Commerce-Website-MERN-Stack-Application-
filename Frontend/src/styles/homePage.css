@@ -1,0 +1,49 @@
+.home {
+    width: 100%;
+    height: 100%;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 600px;
+}
+
+.shopBtn-div {
+    text-align: center;
+}
+
+.ShopBtn {
+    margin: 4rem auto;
+    padding: 6px 10px;
+    font-size: 22px;
+    background-color: white;
+    border: 1px solid rgb(163, 163, 163);
+    transition: transform ease 1s;
+}
+
+.ShopBtn span {
+    font-size: 26px;
+    margin-left: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    mix-blend-mode: difference;
+
+}
+
+.ShopBtn:hover {
+    background-color: red;
+    border: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    filter: sepia(60%);
+    transform: scale(1.1);
+}
+
+.ShopBtn:hover .shopBtn-link {
+    color: white !important;
+
+}

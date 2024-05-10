@@ -1,0 +1,28 @@
+.pagination {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination .current-page {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination button {
+    background-color: #f0f0f0;
+    ;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    color: #f0f0f0;
+    background-color: var(--Header-Bg) !important;
+
+}

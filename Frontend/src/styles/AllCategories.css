@@ -1,0 +1,28 @@
+.ck-container {
+    min-height: fit-content !important;
+}
+
+.ck-image-container {
+    overflow: hidden !important;
+}
+
+.ck-image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.ck-image-container:hover img {
+    animation: scaleDown 10s ease-in infinite;
+
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

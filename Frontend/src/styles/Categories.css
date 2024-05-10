@@ -1,0 +1,86 @@
+.Categories {
+    width: 100%;
+    height: auto;
+    letter-spacing: 1px;
+    margin: 6rem 0px;
+}
+
+.Categories h1 {
+    margin: 6rem 0px 3rem 0px;
+    position: relative;
+    font-weight: 800;
+}
+
+.Categories h1::after {
+    content: "";
+    width: 5.35rem;
+    height: 4px;
+    position: absolute;
+    left: 4px;
+    bottom: -5px;
+    background-color: red;
+}
+
+
+.Categories-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.CategoriesCard {
+    width: 160px;
+    max-height: 400px;
+    max-width: 250px;
+    margin-right: 3px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.CategoriesCard:hover {
+    background-color: rgb(202, 143, 143);
+    color: white;
+}
+
+.CategoriesCard .categories-image-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.CategoriesCard .categories-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform ease-in-out 0.3s;
+}
+
+.CategoriesCard .categories-image-box img:hover {
+    transform: scale(1.6);
+    position: relative;
+}
+
+.CategoriesCard .CategoriesDescription {
+    background-color: rgb(202, 143, 143);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38px;
+    margin: 0px !important;
+    text-transform: capitalize;
+    display: none;
+}
+
+.CategoriesCard:hover .CategoriesDescription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
