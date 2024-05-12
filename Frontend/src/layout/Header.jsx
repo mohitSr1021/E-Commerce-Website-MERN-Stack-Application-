@@ -13,7 +13,7 @@ import { logoutUser } from "../redux/slices/authSlice";
 import { CiSearch } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 import { searchProduct } from "../redux/slices/searchSlice";
-import axios from "axios";
+import { fetchCategories } from "../redux/slices/categoriesSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -26,7 +26,8 @@ const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showDropdownCategories, setShowDropdownCategories] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [categories, setCategories] = useState([]);
+  // const [categories, setCategories] = useState([]);
+  const { categories, isLoading } = useSelector((state) => state.categories);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,17 +71,18 @@ const Header = () => {
   };
 
   // Get all categories
-  const getAllCategories = async () => {
-    try {
-      const { data } = await axios.get("/api/v1/category/all-category/");
-      setCategories(data?.category);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const getAllCategories = async () => {
+  //   try {
+  //     const { data } = await axios.get("/api/v1/category/all-category/");
+  //     setCategories(data?.category);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
   useEffect(() => {
-    getAllCategories();
-  }, []);
+    dispatch(fetchCategories());
+  }, [dispatch]);
 
   return (
     <header className={hasShadow ? "header shadow" : "header"}>
@@ -167,18 +169,22 @@ const Header = () => {
                       <NavLink to="/categories" className="dropdown-item">
                         All Categories
                       </NavLink>
-                      {categories &&
-                        categories?.map((c) => {
-                          return (
-                            <NavLink
-                              to={`/category/${c.slug}`}
-                              className="dropdown-item"
-                              key={c.id}
-                            >
-                              {c.name}
-                            </NavLink>
-                          );
-                        })}
+                      {isLoading ? (
+                        <div className="text-center text-muted">Loading...</div>
+                      ) : (
+                        <div>
+                          {categories &&
+                            categories.map((c) => (
+                              <NavLink
+                                to={`/category/${c.slug}`}
+                                className="dropdown-item"
+                                key={c.id}
+                              >
+                                {c.name}
+                              </NavLink>
+                            ))}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
